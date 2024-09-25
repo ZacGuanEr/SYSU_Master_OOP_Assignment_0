@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module Grid</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">Grid</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:s%3A%5Cdocument%5Cpycharmprojects%5Csysu_cs_master_oop_assignment_0%5Cdynamic_language_python%5Csrc%5Cgrid.py">s:\document\pycharmprojects\sysu_cs_master_oop_assignment_0\dynamic_language_python\src\grid.py</a></td></tr></table>
+    <p><span class="code"><a href="#Grid">Grid</a>&nbsp;module&nbsp;for&nbsp;Sudoku&nbsp;Solver.</span></p>
+<p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="Grid.html#Grid">Grid</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Grid">class <strong>Grid</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Grid">Grid</a>&nbsp;class&nbsp;for&nbsp;representing&nbsp;a&nbsp;Sudoku&nbsp;grid.<br>
+&nbsp;<br>
+Attributes:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;GRID_SIZE&nbsp;(int):&nbsp;The&nbsp;size&nbsp;of&nbsp;the&nbsp;grid&nbsp;(9x9).<br>
+&nbsp;&nbsp;&nbsp;&nbsp;BOX_SIZE&nbsp;(int):&nbsp;The&nbsp;size&nbsp;of&nbsp;each&nbsp;box&nbsp;(3x3).<br>
+&nbsp;&nbsp;&nbsp;&nbsp;grid&nbsp;(list):&nbsp;A&nbsp;2D&nbsp;list&nbsp;representing&nbsp;the&nbsp;Sudoku&nbsp;grid.<br>
+&nbsp;<br>
+Methods:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Grid-__init__">__init__</a>():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Initialize&nbsp;the&nbsp;<a href="#Grid">Grid</a>&nbsp;<a href="builtins.html#object">object</a>&nbsp;with&nbsp;default&nbsp;values&nbsp;for&nbsp;grid&nbsp;size,&nbsp;box&nbsp;size,&nbsp;and&nbsp;the&nbsp;grid&nbsp;itself.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Grid-init">init</a>(grid_str):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Initialize&nbsp;the&nbsp;<a href="#Grid">Grid</a>&nbsp;<a href="builtins.html#object">object</a>&nbsp;with&nbsp;a&nbsp;string&nbsp;representing&nbsp;the&nbsp;Sudoku&nbsp;grid.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Grid-check_input">check_input</a>(grid_str):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Validate&nbsp;the&nbsp;input&nbsp;string&nbsp;for&nbsp;the&nbsp;Sudoku&nbsp;grid.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Grid-parse_input">parse_input</a>(input_string):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parse&nbsp;the&nbsp;input&nbsp;string&nbsp;into&nbsp;a&nbsp;2D&nbsp;grid&nbsp;(list&nbsp;of&nbsp;lists).<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Grid-get_row">get_row</a>(row):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get&nbsp;the&nbsp;values&nbsp;in&nbsp;a&nbsp;specific&nbsp;row&nbsp;of&nbsp;the&nbsp;grid.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Grid-get_column">get_column</a>(col):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get&nbsp;the&nbsp;values&nbsp;in&nbsp;a&nbsp;specific&nbsp;column&nbsp;of&nbsp;the&nbsp;grid.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Grid-get_box">get_box</a>(row,&nbsp;col):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get&nbsp;the&nbsp;values&nbsp;in&nbsp;a&nbsp;specific&nbsp;3x3&nbsp;box&nbsp;of&nbsp;the&nbsp;grid.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Grid-get_grid">get_grid</a>():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get&nbsp;the&nbsp;deep&nbsp;copy&nbsp;of&nbsp;current&nbsp;state&nbsp;of&nbsp;the&nbsp;grid.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Grid-__iter__">__iter__</a>():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Make&nbsp;the&nbsp;grid&nbsp;iterable.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="Grid-__init__"><strong>__init__</strong></a>(self)</dt><dd><span class="code">Initialize&nbsp;the&nbsp;<a href="#Grid">Grid</a>&nbsp;<a href="builtins.html#object">object</a>&nbsp;with&nbsp;default&nbsp;values&nbsp;for&nbsp;grid&nbsp;size,&nbsp;box&nbsp;size,&nbsp;and&nbsp;the&nbsp;grid&nbsp;itself.</span></dd></dl>
+
+<dl><dt><a name="Grid-__iter__"><strong>__iter__</strong></a>(self)</dt><dd><span class="code">Make&nbsp;the&nbsp;grid&nbsp;iterable.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;iterator:&nbsp;An&nbsp;iterator&nbsp;over&nbsp;the&nbsp;rows&nbsp;of&nbsp;the&nbsp;grid.</span></dd></dl>
+
+<dl><dt><a name="Grid-check_input"><strong>check_input</strong></a>(self, grid_str)</dt><dd><span class="code">Validate&nbsp;the&nbsp;input&nbsp;string&nbsp;for&nbsp;the&nbsp;Sudoku&nbsp;grid.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;grid_str&nbsp;(str):&nbsp;A&nbsp;string&nbsp;representing&nbsp;the&nbsp;Sudoku&nbsp;grid,&nbsp;where&nbsp;each&nbsp;character&nbsp;is&nbsp;a&nbsp;digit.<br>
+&nbsp;<br>
+Raises:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ValueError:&nbsp;If&nbsp;the&nbsp;input&nbsp;string&nbsp;does&nbsp;not&nbsp;have&nbsp;the&nbsp;correct&nbsp;length.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ValueError:&nbsp;If&nbsp;the&nbsp;input&nbsp;string&nbsp;contains&nbsp;non-digit&nbsp;characters.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ValueError:&nbsp;If&nbsp;the&nbsp;input&nbsp;string&nbsp;contains&nbsp;out-of-range&nbsp;digits.</span></dd></dl>
+
+<dl><dt><a name="Grid-get_box"><strong>get_box</strong></a>(self, row, col)</dt><dd><span class="code">Get&nbsp;the&nbsp;values&nbsp;in&nbsp;a&nbsp;specific&nbsp;3x3&nbsp;box&nbsp;of&nbsp;the&nbsp;grid.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;row&nbsp;(int):&nbsp;The&nbsp;row&nbsp;index&nbsp;of&nbsp;a&nbsp;cell&nbsp;within&nbsp;the&nbsp;desired&nbsp;3x3&nbsp;box.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;col&nbsp;(int):&nbsp;The&nbsp;column&nbsp;index&nbsp;of&nbsp;a&nbsp;cell&nbsp;within&nbsp;the&nbsp;desired&nbsp;3x3&nbsp;box.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;list:&nbsp;A&nbsp;list&nbsp;of&nbsp;integers&nbsp;representing&nbsp;the&nbsp;values&nbsp;in&nbsp;the&nbsp;specified&nbsp;3x3&nbsp;box.</span></dd></dl>
+
+<dl><dt><a name="Grid-get_column"><strong>get_column</strong></a>(self, col)</dt><dd><span class="code">Get&nbsp;the&nbsp;values&nbsp;in&nbsp;a&nbsp;specific&nbsp;column&nbsp;of&nbsp;the&nbsp;grid.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;col&nbsp;(int):&nbsp;The&nbsp;index&nbsp;of&nbsp;the&nbsp;column&nbsp;to&nbsp;retrieve.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;list:&nbsp;A&nbsp;list&nbsp;of&nbsp;integers&nbsp;representing&nbsp;the&nbsp;values&nbsp;in&nbsp;the&nbsp;specified&nbsp;column.</span></dd></dl>
+
+<dl><dt><a name="Grid-get_grid"><strong>get_grid</strong></a>(self)</dt><dd><span class="code">Get&nbsp;the&nbsp;deep&nbsp;copy&nbsp;of&nbsp;current&nbsp;state&nbsp;of&nbsp;the&nbsp;grid.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;list:&nbsp;A&nbsp;list&nbsp;of&nbsp;lists&nbsp;representing&nbsp;the&nbsp;current&nbsp;state&nbsp;of&nbsp;the&nbsp;grid.</span></dd></dl>
+
+<dl><dt><a name="Grid-get_row"><strong>get_row</strong></a>(self, row)</dt><dd><span class="code">Get&nbsp;the&nbsp;values&nbsp;in&nbsp;a&nbsp;specific&nbsp;row&nbsp;of&nbsp;the&nbsp;grid.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;row&nbsp;(int):&nbsp;The&nbsp;index&nbsp;of&nbsp;the&nbsp;row&nbsp;to&nbsp;retrieve.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;list:&nbsp;A&nbsp;list&nbsp;of&nbsp;integers&nbsp;representing&nbsp;the&nbsp;values&nbsp;in&nbsp;the&nbsp;specified&nbsp;row.</span></dd></dl>
+
+<dl><dt><a name="Grid-init"><strong>init</strong></a>(self, grid_str)</dt><dd><span class="code">Initialize&nbsp;the&nbsp;<a href="#Grid">Grid</a>&nbsp;<a href="builtins.html#object">object</a>&nbsp;with&nbsp;a&nbsp;string&nbsp;representing&nbsp;the&nbsp;Sudoku&nbsp;grid.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;grid_str&nbsp;(str):&nbsp;A&nbsp;string&nbsp;representing&nbsp;the&nbsp;Sudoku&nbsp;grid,&nbsp;where&nbsp;each&nbsp;character&nbsp;is&nbsp;a&nbsp;digit.</span></dd></dl>
+
+<dl><dt><a name="Grid-parse_input"><strong>parse_input</strong></a>(self, input_string)</dt><dd><span class="code">Parse&nbsp;the&nbsp;input&nbsp;string&nbsp;into&nbsp;a&nbsp;2D&nbsp;grid&nbsp;(list&nbsp;of&nbsp;lists).<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;input_string&nbsp;(str):&nbsp;A&nbsp;string&nbsp;representing&nbsp;the&nbsp;Sudoku&nbsp;grid,&nbsp;where&nbsp;each&nbsp;character&nbsp;is&nbsp;a&nbsp;digit.<br>
+&nbsp;<br>
+Raises:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ValueError:&nbsp;If&nbsp;the&nbsp;input&nbsp;string&nbsp;does&nbsp;not&nbsp;have&nbsp;the&nbsp;correct&nbsp;length.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ValueError:&nbsp;If&nbsp;the&nbsp;input&nbsp;string&nbsp;contains&nbsp;non-digit&nbsp;characters.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ValueError:&nbsp;If&nbsp;the&nbsp;input&nbsp;string&nbsp;contains&nbsp;out-of-range&nbsp;digits.</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>

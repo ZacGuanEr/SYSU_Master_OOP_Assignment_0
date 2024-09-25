@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module Sudoku</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">Sudoku</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:s%3A%5Cdocument%5Cpycharmprojects%5Csysu_cs_master_oop_assignment_0%5Cdynamic_language_python%5Csrc%5Csudoku.py">s:\document\pycharmprojects\sysu_cs_master_oop_assignment_0\dynamic_language_python\src\sudoku.py</a></td></tr></table>
+    <p></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="logging.html">logging</a><br>
+</td><td class="multicolumn"><a href="random.html">random</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="Grid.html#Grid">Grid.Grid</a>(<a href="builtins.html#object">builtins.object</a>)
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="Sudoku.html#Sudoku">Sudoku</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Sudoku">class <strong>Sudoku</strong></a>(<a href="Grid.html#Grid">Grid.Grid</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Sudoku">Sudoku</a>&nbsp;class&nbsp;that&nbsp;extends&nbsp;the&nbsp;<a href="Grid.html#Grid">Grid</a>&nbsp;class&nbsp;to&nbsp;provide&nbsp;additional&nbsp;functionality<br>
+for&nbsp;parsing&nbsp;and&nbsp;solving&nbsp;<a href="#Sudoku">Sudoku</a>&nbsp;puzzles.<br>
+&nbsp;<br>
+Methods:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Sudoku-__init__">__init__</a>():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Initialize&nbsp;the&nbsp;<a href="#Sudoku">Sudoku</a>&nbsp;object.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Sudoku-parse">parse</a>(grid_str):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parse&nbsp;the&nbsp;input&nbsp;string&nbsp;and&nbsp;initialize&nbsp;the&nbsp;grid.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Sudoku-get_inference">get_inference</a>():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generate&nbsp;and&nbsp;return&nbsp;the&nbsp;possible&nbsp;candidates&nbsp;for&nbsp;each&nbsp;cell&nbsp;in&nbsp;the&nbsp;grid.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Sudoku-is_valid">is_valid</a>(row,&nbsp;col,&nbsp;num):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Check&nbsp;if&nbsp;it's&nbsp;valid&nbsp;to&nbsp;place&nbsp;the&nbsp;number&nbsp;in&nbsp;the&nbsp;given&nbsp;cell.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Sudoku-solve">solve</a>():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve&nbsp;the&nbsp;<a href="#Sudoku">Sudoku</a>&nbsp;puzzle&nbsp;using&nbsp;backtracking.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Sudoku-get_one_random_answer">get_one_random_answer</a>():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get&nbsp;one&nbsp;valid&nbsp;solution&nbsp;for&nbsp;the&nbsp;<a href="#Sudoku">Sudoku</a>&nbsp;puzzle.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="Sudoku.html#Sudoku">Sudoku</a></dd>
+<dd><a href="Grid.html#Grid">Grid.Grid</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Sudoku-__init__"><strong>__init__</strong></a>(self)</dt><dd><span class="code">Initialize&nbsp;the&nbsp;<a href="Grid.html#Grid">Grid</a>&nbsp;object&nbsp;with&nbsp;default&nbsp;values&nbsp;for&nbsp;grid&nbsp;size,&nbsp;box&nbsp;size,&nbsp;and&nbsp;the&nbsp;grid&nbsp;itself.</span></dd></dl>
+
+<dl><dt><a name="Sudoku-get_inference"><strong>get_inference</strong></a>(self)</dt><dd><span class="code">Generate&nbsp;and&nbsp;return&nbsp;the&nbsp;possible&nbsp;candidates&nbsp;for&nbsp;each&nbsp;cell&nbsp;in&nbsp;the&nbsp;grid.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;list:&nbsp;A&nbsp;2D&nbsp;list&nbsp;of&nbsp;sets,&nbsp;where&nbsp;each&nbsp;set&nbsp;contains&nbsp;the&nbsp;possible&nbsp;candidates&nbsp;for&nbsp;a&nbsp;cell.<br>
+&nbsp;<br>
+Raises:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ValueError:&nbsp;If&nbsp;the&nbsp;grid&nbsp;is&nbsp;not&nbsp;initialized.</span></dd></dl>
+
+<dl><dt><a name="Sudoku-get_one_random_answer"><strong>get_one_random_answer</strong></a>(self)</dt><dd><span class="code">Get&nbsp;one&nbsp;valid&nbsp;solution&nbsp;for&nbsp;the&nbsp;<a href="#Sudoku">Sudoku</a>&nbsp;puzzle.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;list:&nbsp;A&nbsp;2D&nbsp;list&nbsp;representing&nbsp;the&nbsp;solved&nbsp;<a href="#Sudoku">Sudoku</a>&nbsp;grid.</span></dd></dl>
+
+<dl><dt><a name="Sudoku-is_valid"><strong>is_valid</strong></a>(self, row, col, num)</dt><dd><span class="code">Check&nbsp;if&nbsp;it's&nbsp;valid&nbsp;to&nbsp;place&nbsp;the&nbsp;number&nbsp;in&nbsp;the&nbsp;given&nbsp;cell.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;row&nbsp;(int):&nbsp;Row&nbsp;index.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;col&nbsp;(int):&nbsp;Column&nbsp;index.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;num&nbsp;(int):&nbsp;Number&nbsp;to&nbsp;place.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;True&nbsp;if&nbsp;valid,&nbsp;False&nbsp;otherwise.</span></dd></dl>
+
+<dl><dt><a name="Sudoku-parse"><strong>parse</strong></a>(self, grid_str)</dt><dd><span class="code">Parse&nbsp;the&nbsp;input&nbsp;string&nbsp;and&nbsp;initialize&nbsp;the&nbsp;grid.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;grid_str&nbsp;(str):&nbsp;A&nbsp;string&nbsp;representing&nbsp;the&nbsp;<a href="#Sudoku">Sudoku</a>&nbsp;grid,&nbsp;where&nbsp;each&nbsp;character&nbsp;is&nbsp;a&nbsp;digit.</span></dd></dl>
+
+<dl><dt><a name="Sudoku-solve"><strong>solve</strong></a>(self)</dt><dd><span class="code">Solve&nbsp;the&nbsp;<a href="#Sudoku">Sudoku</a>&nbsp;puzzle&nbsp;using&nbsp;backtracking.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;True&nbsp;if&nbsp;solved,&nbsp;False&nbsp;otherwise.</span></dd></dl>
+
+<hr>
+Methods inherited from <a href="Grid.html#Grid">Grid.Grid</a>:<br>
+<dl><dt><a name="Sudoku-__iter__"><strong>__iter__</strong></a>(self)</dt><dd><span class="code">Make&nbsp;the&nbsp;grid&nbsp;iterable.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;iterator:&nbsp;An&nbsp;iterator&nbsp;over&nbsp;the&nbsp;rows&nbsp;of&nbsp;the&nbsp;grid.</span></dd></dl>
+
+<dl><dt><a name="Sudoku-check_input"><strong>check_input</strong></a>(self, grid_str)</dt><dd><span class="code">Validate&nbsp;the&nbsp;input&nbsp;string&nbsp;for&nbsp;the&nbsp;<a href="#Sudoku">Sudoku</a>&nbsp;grid.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;grid_str&nbsp;(str):&nbsp;A&nbsp;string&nbsp;representing&nbsp;the&nbsp;<a href="#Sudoku">Sudoku</a>&nbsp;grid,&nbsp;where&nbsp;each&nbsp;character&nbsp;is&nbsp;a&nbsp;digit.<br>
+&nbsp;<br>
+Raises:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ValueError:&nbsp;If&nbsp;the&nbsp;input&nbsp;string&nbsp;does&nbsp;not&nbsp;have&nbsp;the&nbsp;correct&nbsp;length.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ValueError:&nbsp;If&nbsp;the&nbsp;input&nbsp;string&nbsp;contains&nbsp;non-digit&nbsp;characters.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ValueError:&nbsp;If&nbsp;the&nbsp;input&nbsp;string&nbsp;contains&nbsp;out-of-range&nbsp;digits.</span></dd></dl>
+
+<dl><dt><a name="Sudoku-get_box"><strong>get_box</strong></a>(self, row, col)</dt><dd><span class="code">Get&nbsp;the&nbsp;values&nbsp;in&nbsp;a&nbsp;specific&nbsp;3x3&nbsp;box&nbsp;of&nbsp;the&nbsp;grid.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;row&nbsp;(int):&nbsp;The&nbsp;row&nbsp;index&nbsp;of&nbsp;a&nbsp;cell&nbsp;within&nbsp;the&nbsp;desired&nbsp;3x3&nbsp;box.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;col&nbsp;(int):&nbsp;The&nbsp;column&nbsp;index&nbsp;of&nbsp;a&nbsp;cell&nbsp;within&nbsp;the&nbsp;desired&nbsp;3x3&nbsp;box.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;list:&nbsp;A&nbsp;list&nbsp;of&nbsp;integers&nbsp;representing&nbsp;the&nbsp;values&nbsp;in&nbsp;the&nbsp;specified&nbsp;3x3&nbsp;box.</span></dd></dl>
+
+<dl><dt><a name="Sudoku-get_column"><strong>get_column</strong></a>(self, col)</dt><dd><span class="code">Get&nbsp;the&nbsp;values&nbsp;in&nbsp;a&nbsp;specific&nbsp;column&nbsp;of&nbsp;the&nbsp;grid.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;col&nbsp;(int):&nbsp;The&nbsp;index&nbsp;of&nbsp;the&nbsp;column&nbsp;to&nbsp;retrieve.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;list:&nbsp;A&nbsp;list&nbsp;of&nbsp;integers&nbsp;representing&nbsp;the&nbsp;values&nbsp;in&nbsp;the&nbsp;specified&nbsp;column.</span></dd></dl>
+
+<dl><dt><a name="Sudoku-get_grid"><strong>get_grid</strong></a>(self)</dt><dd><span class="code">Get&nbsp;the&nbsp;deep&nbsp;copy&nbsp;of&nbsp;current&nbsp;state&nbsp;of&nbsp;the&nbsp;grid.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;list:&nbsp;A&nbsp;list&nbsp;of&nbsp;lists&nbsp;representing&nbsp;the&nbsp;current&nbsp;state&nbsp;of&nbsp;the&nbsp;grid.</span></dd></dl>
+
+<dl><dt><a name="Sudoku-get_row"><strong>get_row</strong></a>(self, row)</dt><dd><span class="code">Get&nbsp;the&nbsp;values&nbsp;in&nbsp;a&nbsp;specific&nbsp;row&nbsp;of&nbsp;the&nbsp;grid.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;row&nbsp;(int):&nbsp;The&nbsp;index&nbsp;of&nbsp;the&nbsp;row&nbsp;to&nbsp;retrieve.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;list:&nbsp;A&nbsp;list&nbsp;of&nbsp;integers&nbsp;representing&nbsp;the&nbsp;values&nbsp;in&nbsp;the&nbsp;specified&nbsp;row.</span></dd></dl>
+
+<dl><dt><a name="Sudoku-init"><strong>init</strong></a>(self, grid_str)</dt><dd><span class="code">Initialize&nbsp;the&nbsp;<a href="Grid.html#Grid">Grid</a>&nbsp;object&nbsp;with&nbsp;a&nbsp;string&nbsp;representing&nbsp;the&nbsp;<a href="#Sudoku">Sudoku</a>&nbsp;grid.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;grid_str&nbsp;(str):&nbsp;A&nbsp;string&nbsp;representing&nbsp;the&nbsp;<a href="#Sudoku">Sudoku</a>&nbsp;grid,&nbsp;where&nbsp;each&nbsp;character&nbsp;is&nbsp;a&nbsp;digit.</span></dd></dl>
+
+<dl><dt><a name="Sudoku-parse_input"><strong>parse_input</strong></a>(self, input_string)</dt><dd><span class="code">Parse&nbsp;the&nbsp;input&nbsp;string&nbsp;into&nbsp;a&nbsp;2D&nbsp;grid&nbsp;(list&nbsp;of&nbsp;lists).<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;input_string&nbsp;(str):&nbsp;A&nbsp;string&nbsp;representing&nbsp;the&nbsp;<a href="#Sudoku">Sudoku</a>&nbsp;grid,&nbsp;where&nbsp;each&nbsp;character&nbsp;is&nbsp;a&nbsp;digit.<br>
+&nbsp;<br>
+Raises:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ValueError:&nbsp;If&nbsp;the&nbsp;input&nbsp;string&nbsp;does&nbsp;not&nbsp;have&nbsp;the&nbsp;correct&nbsp;length.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ValueError:&nbsp;If&nbsp;the&nbsp;input&nbsp;string&nbsp;contains&nbsp;non-digit&nbsp;characters.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ValueError:&nbsp;If&nbsp;the&nbsp;input&nbsp;string&nbsp;contains&nbsp;out-of-range&nbsp;digits.</span></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="Grid.html#Grid">Grid.Grid</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>
