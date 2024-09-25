@@ -27,6 +27,49 @@ Dynamic_Language_Python
 ```
 
 ### For Static Language Java
-
+#### Java Code Doc: Please see the HTML file in the doc folder
 ```bash
+Static_Language_Java
+│   pom.xml
+│
+└───src
+    ├───doc
+    │   │   allclasses-frame.html
+    │   │   allclasses-noframe.html
+    │   │   constant-values.html
+    │   │   deprecated-list.html
+    │   │   Grid.html
+    │   │   help-doc.html
+    │   │   index.html
+    │   │   overview-tree.html
+    │   │   package-frame.html
+    │   │   package-list
+    │   │   package-summary.html
+    │   │   package-tree.html
+    │   │   script.js
+    │   │   ShowcaseApp.html
+    │   │   stylesheet.css
+    │   │   Sudoku.html
+    │   │   Utils.html
+    │   │
+    │   └───index-files
+    │           index-1.html
+    │           index-2.html
+    │           index-3.html
+    │           index-4.html
+    │           index-5.html
+    │           index-6.html
+    │           index-7.html
+    │
+    ├───main
+    │   └───java
+    │           Grid.java
+    │           ShowcaseApp.java
+    │           Sudoku.java
+    │           Utils.java
+    │
+    └───test
+        └───java
+                GridTest.java
+                SudokuTest.java
 ```
