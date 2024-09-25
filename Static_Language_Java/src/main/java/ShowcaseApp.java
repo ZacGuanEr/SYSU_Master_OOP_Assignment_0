@@ -1,3 +1,4 @@
+// This is a showcase application that demonstrates how to use the Sudoku class to solve a Sudoku puzzle.
 public class ShowcaseApp {
 
     public static void main(String[] args) {

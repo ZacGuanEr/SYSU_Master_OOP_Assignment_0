@@ -1,3 +1,7 @@
+/**
+*  Sudoku.java
+* This class is used to solve Sudoku puzzles.
+*/
 import java.util.*;
 import java.util.logging.Logger;
 

@@ -5,7 +5,7 @@ The first assignment for Master OOP Class
 
 ## Code Structure:
 ### For Dynamic Language Python
-#### Python Code Doc: Please see the HTML file in the corresponding folder
+#### Python Code Doc: Please see the HTML files in the corresponding folder, you can download them and open them in your browser
 ```bash
 Dynamic_Language_Python
     │  Showcase.py
@@ -27,7 +27,7 @@ Dynamic_Language_Python
 ```
 
 ### For Static Language Java
-#### Java Code Doc: Please see the HTML file in the doc folder
+#### Java Code Doc: Please see the HTML files in the doc folder, you can download it and open the index.html file in your browser
 ```bash
 Static_Language_Java
 │   pom.xml
