@@ -6,8 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="SYSU_Master_OOP_Assignment_0" />
+        <module name="SYSU_Master_OOP_Assignment_0_static" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="SYSU_Master_OOP_Assignment_0" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
