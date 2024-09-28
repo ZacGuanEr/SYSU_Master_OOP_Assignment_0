@@ -2,7 +2,6 @@
 The first assignment for Master OOP Class
 
 
-
 ## Code Structure:
 ### For Dynamic Language Python
 #### Python Code Doc: Please see the HTML files in the corresponding folder, you can download them and open them in your browser
@@ -34,32 +33,6 @@ Static_Language_Java
 │
 └───src
     ├───doc
-    │   │   allclasses-frame.html
-    │   │   allclasses-noframe.html
-    │   │   constant-values.html
-    │   │   deprecated-list.html
-    │   │   Grid.html
-    │   │   help-doc.html
-    │   │   index.html
-    │   │   overview-tree.html
-    │   │   package-frame.html
-    │   │   package-list
-    │   │   package-summary.html
-    │   │   package-tree.html
-    │   │   script.js
-    │   │   ShowcaseApp.html
-    │   │   stylesheet.css
-    │   │   Sudoku.html
-    │   │   Utils.html
-    │   │
-    │   └───index-files
-    │           index-1.html
-    │           index-2.html
-    │           index-3.html
-    │           index-4.html
-    │           index-5.html
-    │           index-6.html
-    │           index-7.html
     │
     ├───main
     │   └───java
