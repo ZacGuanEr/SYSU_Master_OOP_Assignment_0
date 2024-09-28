@@ -5,6 +5,8 @@ from src.utils import paint_problem, paint_ans
 This is a showcase of how to use the Sudoku class to solve a Sudoku problem.
 '''
 if __name__ == "__main__":
+
+    # append path to sys.path
     # Create a Sudoku instance and parse a grid string
     sudoku_instance = Sudoku()
     grid_str = "020000300900075002000900500008000003010000060705060900007003000600720001002000040"

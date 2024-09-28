@@ -1,7 +1,7 @@
 import logging
 import random
 
-from Grid import Grid
+from src.Grid import Grid
 
 class Sudoku(Grid):
     """
